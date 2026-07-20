@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Check } from "lucide-react";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
-import { getPolicy, policies } from "@/lib/policies";
+import { getPolicy, policies } from "@/data/policies";
 
 type PolicyPageProps = {
   params: Promise<{

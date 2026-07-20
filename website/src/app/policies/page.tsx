@@ -8,7 +8,7 @@ import {
   UserRoundCheck,
 } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
-import { policies } from "@/lib/policies";
+import { policies } from "@/data/policies";
 
 const icons = {
   "payment-billing": CreditCard,
