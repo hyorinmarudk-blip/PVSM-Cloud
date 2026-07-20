@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import {
   BadgeCheck,
@@ -395,9 +396,10 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {policies.map((policy) => (
-              <div
+              <Link
                 key={policy}
-                className="rounded-2xl border border-white/10 bg-zinc-950 p-6 transition duration-200 hover:border-red-500/40"
+                href="/policies"
+                className="rounded-2xl border border-white/10 bg-zinc-950 p-6 transition duration-200 hover:-translate-y-1 hover:border-red-500/40"
               >
                 <FileCheck2
                   size={27}
@@ -408,7 +410,7 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-6 text-zinc-400">
                   Full website version will be available before public launch.
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -438,13 +440,13 @@ export default function Home() {
               <Phone size={19} aria-hidden="true" />
               (918) 442-9692
             </a>
-            <a
-              href="mailto:poteauvalleyrepair@gmail.com"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 px-7 py-4 font-bold transition-colors hover:bg-white/10"
+            <Link
+              href="/request-service"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-bold transition duration-200 hover:-translate-y-0.5 hover:bg-white/10"
             >
-              <Mail size={19} aria-hidden="true" />
-              Email the Shop
-            </a>
+            <Mail size={20} aria-hidden="true" />
+             Request Service
+            </Link>
             <a
               href="https://share.google/tT3Z3VIMLM7V576j6"
               target="_blank"

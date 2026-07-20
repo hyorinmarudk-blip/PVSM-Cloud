@@ -6,11 +6,12 @@ import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 
 const navigation = [
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "PVR Promise", href: "#promise" },
-  { label: "Policies", href: "#policies" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "About", href: "/#about" },
+  { label: "PVR Promise", href: "/#promise" },
+  { label: "Policies", href: "/policies" },
+  { label: "Request Service", href: "/request-service" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function SiteHeader() {
