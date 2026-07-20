@@ -1,105 +1,132 @@
 import Image from "next/image";
-import Link from "next/link";
+import {
+  BadgeCheck,
+  BatteryCharging,
+  CalendarClock,
+  Car,
+  Check,
+  CircleDollarSign,
+  ClipboardCheck,
+  FileCheck2,
+  Gauge,
+  HeartHandshake,
+  Mail,
+  MapPin,
+  Phone,
+  SearchCheck,
+  ShieldCheck,
+  Sparkles,
+  Tractor,
+  Truck,
+  Wrench,
+} from "lucide-react";
+import SiteHeader from "@/components/SiteHeader";
 
 const services = [
   {
     title: "Automotive Repair",
     description:
       "Dependable maintenance and repairs for brakes, steering, suspension, batteries, filters, leaks, and other common vehicle concerns.",
-    icon: "🚗",
+    icon: Car,
   },
   {
     title: "Diagnostics",
     description:
       "Honest automotive and electrical diagnostics focused on identifying the actual problem before unnecessary parts are replaced.",
-    icon: "🔍",
+    icon: SearchCheck,
   },
   {
     title: "Mobile Service",
     description:
       "Mobile diagnostics, scheduled on-site repairs, and emergency roadside assistance throughout LeFlore County and surrounding areas.",
-    icon: "🚚",
+    icon: Truck,
   },
   {
     title: "Small Engine Repair",
     description:
       "Repair and maintenance for lawn mowers, generators, tillers, trimmers, edgers, and other lawn and garden equipment.",
-    icon: "🛠️",
+    icon: Tractor,
   },
   {
     title: "Detailing",
     description:
       "Basic vehicle cleaning services, including interior vacuuming, body washing, wheel cleaning, and waxing.",
-    icon: "✨",
+    icon: Sparkles,
   },
 ];
 
 const reasons = [
-  "Veteran Owned & Operated",
-  "Honest Diagnostics",
-  "Quality Parts & Repairs",
-  "Mobile Service Available",
-  "Automotive & Small Engine Specialists",
-  "Transparent Estimates",
-  "Modern Digital Repair Tracking",
+  { label: "Veteran Owned & Operated", icon: BadgeCheck },
+  { label: "Honest Diagnostics", icon: SearchCheck },
+  { label: "Quality Parts & Repairs", icon: Wrench },
+  { label: "Mobile Service Available", icon: Truck },
+  { label: "Automotive & Small Engine Specialists", icon: Gauge },
+  { label: "Transparent Estimates", icon: ClipboardCheck },
+  { label: "Modern Digital Repair Tracking", icon: FileCheck2 },
+];
+
+const promises = [
+  {
+    title: "We diagnose before replacing parts.",
+    description:
+      "Testing and inspection come first so repairs are based on evidence instead of guesswork.",
+    icon: SearchCheck,
+  },
+  {
+    title: "We explain the repair.",
+    description:
+      "You receive straightforward information about the concern, recommended work, and expected cost.",
+    icon: HeartHandshake,
+  },
+  {
+    title: "We use quality parts.",
+    description:
+      "Whenever possible, replacement parts are sourced from reputable suppliers and selected for dependable service.",
+    icon: BatteryCharging,
+  },
+  {
+    title: "We stand behind our workmanship.",
+    description:
+      "Eligible repairs are supported by written warranty terms and clear procedures if a concern returns.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "We provide transparent estimates.",
+    description:
+      "Additional work is discussed before proceeding whenever practical, so you stay informed.",
+    icon: CircleDollarSign,
+  },
+  {
+    title: "We respect your vehicle and equipment.",
+    description:
+      "Repair documentation and photographs help maintain an accurate record from intake through completion.",
+    icon: CalendarClock,
+  },
+];
+
+const policies = [
+  "Payment & Billing Policy",
+  "Shop Policies & Terms",
+  "Warranty Policy",
+  "Privacy Policy",
+  "Photo Documentation Policy",
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/images/poteau-valley-repair-logo.png"
-              alt="Poteau Valley Repair"
-              width={72}
-              height={72}
-              priority
-              className="h-14 w-auto"
-            />
+    <main className="min-h-screen overflow-x-hidden bg-zinc-950 text-white">
+      <SiteHeader />
 
-            <div className="hidden sm:block">
-              <p className="text-sm font-bold uppercase tracking-[0.18em]">
-                Poteau Valley Repair
-              </p>
-              <p className="text-xs text-zinc-400">
-                Veteran Owned &amp; Operated
-              </p>
-            </div>
-          </Link>
+      <section className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-30 bg-zinc-950" />
+        <div className="absolute right-[-15rem] top-[-12rem] -z-20 h-[38rem] w-[38rem] rounded-full bg-red-700/25 blur-[130px]" />
+        <div className="absolute bottom-[-18rem] left-[-14rem] -z-20 h-[34rem] w-[34rem] rounded-full bg-red-950/40 blur-[120px]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,transparent_55%,#09090b)]" />
 
-          <nav className="hidden items-center gap-7 text-sm font-medium lg:flex">
-            <a href="#services" className="transition hover:text-red-500">
-              Services
-            </a>
-            <a href="#about" className="transition hover:text-red-500">
-              About
-            </a>
-            <a href="#policies" className="transition hover:text-red-500">
-              Policies
-            </a>
-            <a href="#contact" className="transition hover:text-red-500">
-              Contact
-            </a>
-          </nav>
-
-          <a
-            href="tel:+19184429692"
-            className="rounded-full bg-red-600 px-5 py-3 text-sm font-bold shadow-lg shadow-red-950/40 transition hover:bg-red-500"
-          >
-            Call Now
-          </a>
-        </div>
-      </header>
-
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(220,38,38,0.22),transparent_38%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(9,9,11,0.9))]" />
-
-        <div className="relative mx-auto grid min-h-[760px] max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+        <div className="mx-auto grid min-h-[760px] max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
           <div>
-            <p className="mb-5 inline-flex rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-400">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-400">
+              <MapPin size={16} aria-hidden="true" />
               Serving LeFlore County &amp; Surrounding Counties
             </p>
 
@@ -118,23 +145,32 @@ export default function Home() {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
                 href="tel:+19184429692"
-                className="rounded-xl bg-red-600 px-7 py-4 text-center font-bold shadow-xl shadow-red-950/40 transition hover:-translate-y-0.5 hover:bg-red-500"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-7 py-4 font-bold shadow-xl shadow-red-950/40 transition duration-200 hover:-translate-y-0.5 hover:bg-red-500"
               >
+                <Phone size={20} aria-hidden="true" />
                 Call for an Estimate
               </a>
 
               <a
                 href="mailto:poteauvalleyrepair@gmail.com?subject=Service%20Request"
-                className="rounded-xl border border-white/20 bg-white/5 px-7 py-4 text-center font-bold transition hover:-translate-y-0.5 hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-bold transition duration-200 hover:-translate-y-0.5 hover:bg-white/10"
               >
+                <Mail size={20} aria-hidden="true" />
                 Request Service
               </a>
             </div>
 
             <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-zinc-400">
-              <span>✓ Mobile service available</span>
-              <span>✓ Transparent estimates</span>
-              <span>✓ Quality replacement parts</span>
+              {[
+                "Mobile service available",
+                "Transparent estimates",
+                "Quality replacement parts",
+              ].map((item) => (
+                <span key={item} className="flex items-center gap-2">
+                  <Check size={16} className="text-red-500" aria-hidden="true" />
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
 
@@ -178,26 +214,31 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {services.map((service) => (
-              <article
-                key={service.title}
-                className="group rounded-2xl border border-white/10 bg-zinc-950 p-7 transition hover:-translate-y-1 hover:border-red-500/50"
-              >
-                <div className="text-4xl" aria-hidden="true">
-                  {service.icon}
-                </div>
-                <h3 className="mt-5 text-2xl font-bold">{service.title}</h3>
-                <p className="mt-3 leading-7 text-zinc-400">
-                  {service.description}
-                </p>
-              </article>
-            ))}
+            {services.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <article
+                  key={service.title}
+                  className="group rounded-2xl border border-white/10 bg-zinc-950 p-7 transition duration-300 hover:-translate-y-1 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-950/20"
+                >
+                  <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-red-600/15 text-red-500 transition duration-300 group-hover:bg-red-600 group-hover:text-white">
+                    <Icon size={26} aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-5 text-2xl font-bold">{service.title}</h3>
+                  <p className="mt-3 leading-7 text-zinc-400">
+                    {service.description}
+                  </p>
+                </article>
+              );
+            })}
 
             <article className="rounded-2xl border border-red-500/30 bg-red-600 p-7 shadow-xl shadow-red-950/30">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-100">
+              <Wrench size={34} aria-hidden="true" />
+              <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-red-100">
                 Need help?
               </p>
-              <h3 className="mt-4 text-2xl font-black">
+              <h3 className="mt-3 text-2xl font-black">
                 Not sure which service you need?
               </h3>
               <p className="mt-3 leading-7 text-red-50">
@@ -206,8 +247,9 @@ export default function Home() {
               </p>
               <a
                 href="tel:+19184429692"
-                className="mt-6 inline-block rounded-lg bg-white px-5 py-3 font-bold text-red-700 transition hover:bg-red-50"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-bold text-red-700 transition duration-200 hover:-translate-y-0.5 hover:bg-red-50"
               >
+                <Phone size={18} aria-hidden="true" />
                 Call (918) 442-9692
               </a>
             </article>
@@ -249,17 +291,21 @@ export default function Home() {
             <h3 className="text-2xl font-black">Why choose us?</h3>
 
             <div className="mt-7 grid gap-4">
-              {reasons.map((reason) => (
-                <div
-                  key={reason}
-                  className="flex items-center gap-4 rounded-xl border border-white/10 bg-zinc-950 px-5 py-4"
-                >
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-600 font-bold">
-                    ✓
-                  </span>
-                  <span className="font-semibold">{reason}</span>
-                </div>
-              ))}
+              {reasons.map((reason) => {
+                const Icon = reason.icon;
+
+                return (
+                  <div
+                    key={reason.label}
+                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-zinc-950 px-5 py-4"
+                  >
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-red-600 text-white">
+                      <Icon size={18} aria-hidden="true" />
+                    </span>
+                    <span className="font-semibold">{reason.label}</span>
+                  </div>
+                );
+              })}
             </div>
 
             <p className="mt-6 text-sm text-zinc-500">
@@ -270,7 +316,46 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-zinc-900 py-20">
+      <section
+        id="promise"
+        className="border-y border-white/10 bg-zinc-900 py-24"
+      >
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="font-bold uppercase tracking-[0.2em] text-red-500">
+              The PVR Promise
+            </p>
+            <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">
+              Straightforward service from diagnosis to completion
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-zinc-400">
+              These principles guide how we communicate, diagnose, document, and
+              complete every repair.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {promises.map((promise) => {
+              const Icon = promise.icon;
+
+              return (
+                <article
+                  key={promise.title}
+                  className="rounded-2xl border border-white/10 bg-zinc-950 p-7"
+                >
+                  <Icon size={30} className="text-red-500" aria-hidden="true" />
+                  <h3 className="mt-5 text-xl font-bold">{promise.title}</h3>
+                  <p className="mt-3 leading-7 text-zinc-400">
+                    {promise.description}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-5 text-center lg:px-8">
           <p className="font-bold uppercase tracking-[0.2em] text-red-500">
             Customer Portal
@@ -292,7 +377,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="policies" className="py-24">
+      <section id="policies" className="bg-zinc-900 py-24">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.2em] text-red-500">
@@ -309,18 +394,17 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              "Payment & Billing Policy",
-              "Shop Policies & Terms",
-              "Warranty Policy",
-              "Privacy Policy",
-              "Photo Documentation Policy",
-            ].map((policy) => (
+            {policies.map((policy) => (
               <div
                 key={policy}
-                className="rounded-2xl border border-white/10 bg-zinc-900 p-6"
+                className="rounded-2xl border border-white/10 bg-zinc-950 p-6 transition duration-200 hover:border-red-500/40"
               >
-                <h3 className="text-xl font-bold">{policy}</h3>
+                <FileCheck2
+                  size={27}
+                  className="text-red-500"
+                  aria-hidden="true"
+                />
+                <h3 className="mt-4 text-xl font-bold">{policy}</h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-400">
                   Full website version will be available before public launch.
                 </p>
@@ -349,22 +433,25 @@ export default function Home() {
           <div className="flex flex-col gap-3">
             <a
               href="tel:+19184429692"
-              className="rounded-xl bg-white px-7 py-4 text-center font-black text-red-700 transition hover:bg-red-50"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-7 py-4 font-black text-red-700 transition duration-200 hover:-translate-y-0.5 hover:bg-red-50"
             >
+              <Phone size={19} aria-hidden="true" />
               (918) 442-9692
             </a>
             <a
               href="mailto:poteauvalleyrepair@gmail.com"
-              className="rounded-xl border border-white/30 px-7 py-4 text-center font-bold transition hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 px-7 py-4 font-bold transition-colors hover:bg-white/10"
             >
+              <Mail size={19} aria-hidden="true" />
               Email the Shop
             </a>
             <a
               href="https://share.google/tT3Z3VIMLM7V576j6"
               target="_blank"
               rel="noreferrer"
-              className="rounded-xl border border-white/30 px-7 py-4 text-center font-bold transition hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 px-7 py-4 font-bold transition-colors hover:bg-white/10"
             >
+              <MapPin size={19} aria-hidden="true" />
               View Google Business Profile
             </a>
           </div>
