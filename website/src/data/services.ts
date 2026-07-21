@@ -57,7 +57,6 @@ export const services: Service[] = [
           "Water-leak inspection and repair",
           "General mechanical repairs",
           "Vehicle inspections",
-          "Safety-related inspections",
         ],
       },
       {
