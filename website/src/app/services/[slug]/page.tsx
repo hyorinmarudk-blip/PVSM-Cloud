@@ -163,13 +163,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 Request Service
               </Link>
 
-              <a
-                href="mailto:poteauvalleyrepair@gmail.com"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3 font-bold transition hover:bg-white/5"
-              >
-                <Mail size={18} aria-hidden="true" />
-                Email the Shop
-              </a>
+              <Link
+              href="/request-service"
+              className="rounded-xl bg-red-600 px-7 py-4 text-center font-black transition hover:bg-red-500"
+            >
+              Email the Shop
+            </Link>
             </div>
           </section>
         </div>

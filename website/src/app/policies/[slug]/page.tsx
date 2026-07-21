@@ -121,12 +121,13 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
                 Call (918) 442-9692
               </a>
 
-              <a
-                href="mailto:poteauvalleyrepair@gmail.com"
-                className="rounded-xl border border-white/20 px-6 py-3 text-center font-bold transition hover:bg-white/5"
-              >
-                Email the Shop
-              </a>
+            <Link
+              href="/request-service"
+              className="rounded-xl bg-red-600 px-7 py-4 text-center font-black transition hover:bg-red-500"
+            >
+              Email the Shop
+            </Link>
+
             </div>
           </section>
 

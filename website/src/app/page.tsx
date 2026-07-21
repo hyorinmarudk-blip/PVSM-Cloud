@@ -21,6 +21,15 @@ import {
   Tractor,
   Truck,
   Wrench,
+  Banknote,
+  CheckCircle2,
+  ClipboardList,
+  CreditCard,
+  FileSignature,
+  MessageSquareText,
+  ReceiptText,
+  RotateCcw,
+  Smartphone,
 } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -117,6 +126,37 @@ const policies = [
   "Warranty Policy",
   "Privacy Policy",
   "Photo Documentation Policy",
+];
+
+const repairSteps = [
+  {
+    number: "01",
+    title: "Request Service",
+    description:
+      "Call or submit a service request with your contact information, vehicle or equipment details, and a description of the concern.",
+    icon: MessageSquareText,
+  },
+  {
+    number: "02",
+    title: "Inspection & Diagnosis",
+    description:
+      "We inspect and test the vehicle or equipment to identify the problem and determine what work may be required.",
+    icon: ClipboardList,
+  },
+  {
+    number: "03",
+    title: "Estimate & Authorization",
+    description:
+      "You receive an explanation of the recommended work and estimated cost before repairs proceed whenever practical.",
+    icon: FileSignature,
+  },
+  {
+    number: "04",
+    title: "Repair & Verification",
+    description:
+      "Authorized repairs are completed, documented, and checked to confirm proper operation before release.",
+    icon: RotateCcw,
+  },
 ];
 
 export default function Home() {
@@ -364,6 +404,278 @@ export default function Home() {
       </section>
 
       <section className="py-24">
+  <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="font-bold uppercase tracking-[0.2em] text-red-500">
+        Our Repair Process
+      </p>
+
+      <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">
+        Clear communication from the first call to final pickup
+      </h2>
+
+      <p className="mt-5 text-lg leading-8 text-zinc-400">
+        Every job is different, but our process is built around careful
+        evaluation, customer authorization, documentation, and final
+        verification.
+      </p>
+    </div>
+
+    <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      {repairSteps.map((step) => {
+        const Icon = step.icon;
+
+        return (
+          <article
+            key={step.number}
+            className="relative rounded-3xl border border-white/10 bg-zinc-900 p-7"
+          >
+            <span className="absolute right-6 top-5 text-5xl font-black text-white/[0.04]">
+              {step.number}
+            </span>
+
+            <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-red-600/15 text-red-500">
+              <Icon size={27} aria-hidden="true" />
+            </div>
+
+            <p className="mt-6 text-sm font-black uppercase tracking-[0.2em] text-red-500">
+              Step {step.number}
+            </p>
+
+            <h3 className="mt-3 text-xl font-black">{step.title}</h3>
+
+            <p className="mt-3 leading-7 text-zinc-400">
+              {step.description}
+            </p>
+          </article>
+           );
+         })}
+          </div>
+
+          <div className="mt-10 text-center">
+           <Link
+           href="/request-service"
+           className="inline-flex rounded-xl bg-red-600 px-7 py-4 font-black transition hover:-translate-y-0.5 hover:bg-red-500"
+            >
+              Start a Service Request
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-zinc-900 py-24">
+  <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-2 lg:px-8">
+    <article className="rounded-3xl border border-white/10 bg-zinc-950 p-8 sm:p-10">
+      <ShieldCheck
+        size={36}
+        className="text-red-500"
+        aria-hidden="true"
+      />
+
+      <p className="mt-6 font-bold uppercase tracking-[0.2em] text-red-500">
+        Warranty at a Glance
+      </p>
+
+      <h2 className="mt-3 text-3xl font-black">
+        Workmanship backed by written terms
+      </h2>
+
+      <p className="mt-5 leading-7 text-zinc-400">
+        Eligible repairs performed with parts supplied by Poteau Valley Repair
+        include workmanship coverage subject to the full Warranty Policy.
+      </p>
+
+      <div className="mt-7 space-y-4">
+        {[
+          {
+            label: "Automotive Repairs",
+            coverage: "12 months or 12,000 miles",
+          },
+          {
+            label: "Lawn & Garden Equipment",
+            coverage: "90 days",
+          },
+          {
+            label: "Small Engines",
+            coverage: "90 days",
+          },
+          {
+            label: "Electrical Repairs",
+            coverage: "90 days",
+          },
+        ].map((item) => (
+          <div
+            key={item.label}
+            className="flex flex-col justify-between gap-2 rounded-xl border border-white/10 bg-zinc-900 px-5 py-4 sm:flex-row sm:items-center"
+          >
+            <span className="font-bold">{item.label}</span>
+            <span className="text-sm font-semibold text-red-500">
+              {item.coverage}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <p className="mt-6 text-sm leading-6 text-zinc-500">
+        Coverage exclusions, customer responsibilities, parts warranties, and
+        claim procedures are explained in the complete written policy.
+      </p>
+
+      <Link
+        href="/policies/warranty"
+        className="mt-7 inline-flex items-center gap-2 font-bold text-red-500 transition hover:text-red-400"
+      >
+        Read the full Warranty Policy
+        <ReceiptText size={18} aria-hidden="true" />
+      </Link>
+    </article>
+
+    <article className="rounded-3xl border border-white/10 bg-zinc-950 p-8 sm:p-10">
+      <CreditCard
+        size={36}
+        className="text-red-500"
+        aria-hidden="true"
+      />
+
+      <p className="mt-6 font-bold uppercase tracking-[0.2em] text-red-500">
+        Payment Options
+      </p>
+
+      <h2 className="mt-3 text-3xl font-black">
+        Flexible ways to pay
+      </h2>
+
+      <p className="mt-5 leading-7 text-zinc-400">
+        Payment is due according to the written Payment &amp; Billing Policy.
+        Financing options are subject to provider approval.
+      </p>
+
+      <div className="mt-7 grid gap-4 sm:grid-cols-2">
+        {[
+          {
+            label: "Cash",
+            icon: Banknote,
+          },
+          {
+            label: "Credit & Debit Cards",
+            icon: CreditCard,
+          },
+          {
+            label: "Cash App",
+            icon: Smartphone,
+          },
+          {
+            label: "Square Afterpay",
+            icon: CheckCircle2,
+          },
+          {
+            label: "Approved Checks",
+            icon: ReceiptText,
+          },
+        ].map((method) => {
+          const Icon = method.icon;
+
+          return (
+            <div
+              key={method.label}
+              className="flex items-center gap-3 rounded-xl border border-white/10 bg-zinc-900 px-5 py-4"
+            >
+              <Icon
+                size={21}
+                className="shrink-0 text-red-500"
+                aria-hidden="true"
+              />
+              <span className="font-semibold">{method.label}</span>
+            </div>
+          );
+        })}
+      </div>
+
+      <p className="mt-6 text-sm leading-6 text-zinc-500">
+        Square Afterpay is subject to customer approval. Approved business
+        checks may be limited to established business customers.
+      </p>
+
+      <Link
+        href="/policies/payment-billing"
+        className="mt-7 inline-flex items-center gap-2 font-bold text-red-500 transition hover:text-red-400"
+      >
+        Review Payment &amp; Billing Terms
+        <ReceiptText size={18} aria-hidden="true" />
+      </Link>
+    </article>
+  </div>
+</section>
+
+      <section className="py-24">
+  <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <div className="overflow-hidden rounded-3xl border border-red-500/30 bg-red-950/20">
+      <div className="grid gap-10 p-8 sm:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:p-12">
+        <div>
+          <Truck
+            size={42}
+            className="text-red-500"
+            aria-hidden="true"
+          />
+
+          <p className="mt-6 font-bold uppercase tracking-[0.2em] text-red-500">
+            Mobile Service
+          </p>
+
+          <h2 className="mt-3 text-4xl font-black">
+            Repair help brought to your location
+          </h2>
+
+          <p className="mt-5 leading-8 text-zinc-300">
+            Mobile diagnostics, scheduled repairs, equipment service, and
+            roadside assistance are available when the job can be completed
+            safely and practically outside the shop.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            "Mobile vehicle diagnostics",
+            "Scheduled on-site repairs",
+            "Emergency roadside assistance",
+            "On-site mower and equipment service",
+            "Battery and no-start testing",
+            "Service throughout the surrounding area",
+          ].map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-3 rounded-xl border border-white/10 bg-zinc-950/70 p-4"
+            >
+              <CheckCircle2
+                size={19}
+                className="mt-0.5 shrink-0 text-red-500"
+                aria-hidden="true"
+              />
+              <span className="font-semibold text-zinc-200">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col items-start justify-between gap-6 border-t border-white/10 bg-zinc-950/50 px-8 py-7 sm:px-10 lg:flex-row lg:items-center lg:px-12">
+        <p className="max-w-3xl text-sm leading-6 text-zinc-400">
+          Availability depends on location, weather, road conditions, safe
+          working space, parts availability, and the type of repair required.
+          Some repairs must be completed at the shop.
+        </p>
+
+        <Link
+          href="/services/mobile-service"
+          className="shrink-0 rounded-xl border border-white/20 px-6 py-3 font-bold transition hover:bg-white/5"
+        >
+          Mobile Service Details
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-5 text-center lg:px-8">
           <p className="font-bold uppercase tracking-[0.2em] text-red-500">
             Customer Portal
@@ -467,19 +779,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-black py-10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-          <div>
-            <p className="font-bold text-white">Poteau Valley Repair</p>
-            <p>Veteran Owned &amp; Operated</p>
-          </div>
 
-          <div className="sm:text-right">
-            <p>LeFlore County and Surrounding Counties</p>
-            <p>© 2026 Poteau Valley Repair. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
