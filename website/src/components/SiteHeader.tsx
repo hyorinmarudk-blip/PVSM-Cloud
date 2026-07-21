@@ -58,7 +58,7 @@ export default function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <a
-            href="tel:+19184429692"
+            href="tel:+19189620233"
             className="hidden items-center gap-2 rounded-full bg-red-600 px-5 py-3 text-sm font-bold shadow-lg shadow-red-950/40 transition duration-200 hover:-translate-y-0.5 hover:bg-red-500 sm:flex"
           >
             <Phone size={17} aria-hidden="true" />
@@ -96,12 +96,12 @@ export default function SiteHeader() {
             ))}
 
             <a
-              href="tel:+19184429692"
+              href="tel:+19189620233"
               onClick={closeMenu}
               className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-red-600 px-5 py-3 font-bold transition-colors hover:bg-red-500 sm:hidden"
             >
               <Phone size={18} aria-hidden="true" />
-              Call (918) 442-9692
+              Call (918) 962-0233
             </a>
           </nav>
         </div>

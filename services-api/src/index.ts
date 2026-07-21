@@ -1,5 +1,7 @@
 interface Env {
   TURNSTILE_SECRET_KEY: string;
+  EMAIL_TEST_KEY: string;
+  EMAIL: SendEmail;
 }
 
 type TurnstileResponse = {
@@ -186,6 +188,71 @@ export default {
         origin,
       );
     }
+
+	if (request.method === "POST" && url.pathname === "/test-email") {
+  const suppliedKey = request.headers.get("X-Test-Key");
+
+  if (!suppliedKey || suppliedKey !== env.EMAIL_TEST_KEY) {
+    return jsonResponse(
+      {
+        success: false,
+        error: "Unauthorized.",
+      },
+      401,
+      origin,
+    );
+  }
+
+  try {
+    const result = await env.EMAIL.send({
+      to: "poteauvalleyrepair@gmail.com",
+      from: {
+        email: "service@poteauvalleyrepair.com",
+        name: "Poteau Valley Repair",
+      },
+      subject: "PVSM Cloud Worker Email Test",
+      text: [
+        "The PVSM Cloud Worker email binding is working.",
+        "",
+        `Sent: ${new Date().toISOString()}`,
+        "Worker: services-api",
+      ].join("\n"),
+      html: `
+        <div style="font-family:Arial,sans-serif;max-width:620px;margin:auto">
+          <h1 style="color:#b91c1c">PVSM Cloud Email Test</h1>
+          <p>The Cloudflare Worker email binding is working.</p>
+          <p><strong>Worker:</strong> services-api</p>
+          <p><strong>Sent:</strong> ${new Date().toISOString()}</p>
+        </div>
+      `,
+    });
+
+    return jsonResponse(
+      {
+        success: true,
+        message: "Test email sent.",
+        messageId: result.messageId,
+      },
+      200,
+      origin,
+    );
+  } catch (error) {
+    console.error("Email test failed:", error);
+
+    const message =
+      error instanceof Error ? error.message : "Unknown email error.";
+
+    return jsonResponse(
+      {
+        success: false,
+        error: "Email delivery failed.",
+        details: message,
+      },
+      500,
+      origin,
+    );
+  }
+}
 
     return jsonResponse(
       {

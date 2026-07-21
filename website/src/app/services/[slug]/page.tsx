@@ -86,7 +86,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </Link>
 
             <a
-              href="tel:+19184429692"
+              href="tel:+19189620233"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-7 py-4 font-bold transition hover:bg-white/5"
             >
               <Phone size={19} aria-hidden="true" />

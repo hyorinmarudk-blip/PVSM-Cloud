@@ -147,7 +147,7 @@ export default function SiteFooter() {
 
           <div className="mt-6 space-y-4">
             <a
-              href="tel:+19184429692"
+              href="tel:+19189620233"
               className="flex items-center gap-3 text-zinc-400 transition hover:text-red-500"
             >
               <Phone

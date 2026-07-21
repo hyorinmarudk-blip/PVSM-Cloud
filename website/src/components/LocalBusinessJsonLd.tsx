@@ -14,7 +14,7 @@ export default function LocalBusinessJsonLd() {
     image:
       "https://poteauvalleyrepair.com/images/poteau-valley-repair-logo.png",
 
-    telephone: "+1-918-442-9692",
+    telephone: "+1-918-962-0233",
 
     email: "poteauvalleyrepair@gmail.com",
 

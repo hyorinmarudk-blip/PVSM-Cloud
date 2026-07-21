@@ -45,10 +45,10 @@ export default function RequestServicePage() {
               <Phone size={27} className="text-red-500" aria-hidden="true" />
               <h2 className="mt-4 text-xl font-black">Prefer to call?</h2>
               <a
-                href="tel:+19184429692"
+                href="tel:+19189620233"
                 className="mt-3 block text-lg font-bold text-red-500"
               >
-                (918) 442-9692
+                (918) 962-0233
               </a>
             </div>
 

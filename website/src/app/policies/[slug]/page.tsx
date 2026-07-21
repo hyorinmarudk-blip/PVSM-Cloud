@@ -115,10 +115,10 @@ export default async function PolicyPage({ params }: PolicyPageProps) {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
-                href="tel:+19184429692"
+                href="tel:+19189620233"
                 className="rounded-xl bg-red-600 px-6 py-3 text-center font-bold transition hover:bg-red-500"
               >
-                Call (918) 442-9692
+                Call (918) 962-0233
               </a>
 
             <Link

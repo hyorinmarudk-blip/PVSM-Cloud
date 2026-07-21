@@ -191,7 +191,7 @@ export default function Home() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
-                href="tel:+19184429692"
+                href="tel:+19189620233"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-7 py-4 font-bold shadow-xl shadow-red-950/40 transition duration-200 hover:-translate-y-0.5 hover:bg-red-500"
               >
                 <Phone size={20} aria-hidden="true" />
@@ -294,11 +294,11 @@ export default function Home() {
                 determine the next step.
               </p>
               <a
-                href="tel:+19184429692"
+                href="tel:+19189620233"
                 className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-bold text-red-700 transition duration-200 hover:-translate-y-0.5 hover:bg-red-50"
               >
                 <Phone size={18} aria-hidden="true" />
-                Call (918) 442-9692
+                Call (918) 962-0233
               </a>
             </article>
           </div>
@@ -753,11 +753,11 @@ export default function Home() {
 
           <div className="flex flex-col gap-3">
             <a
-              href="tel:+19184429692"
+              href="tel:+19189620233"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-7 py-4 font-black text-red-700 transition duration-200 hover:-translate-y-0.5 hover:bg-red-50"
             >
               <Phone size={19} aria-hidden="true" />
-              (918) 442-9692
+              (918) 962-0233
             </a>
             <Link
               href="/request-service"
