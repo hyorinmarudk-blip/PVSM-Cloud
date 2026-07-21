@@ -8,6 +8,7 @@ import {
   Check,
   CircleDollarSign,
   ClipboardCheck,
+  ExternalLink,
   FileCheck2,
   Gauge,
   HeartHandshake,
@@ -25,30 +26,35 @@ import SiteHeader from "@/components/SiteHeader";
 
 const services = [
   {
+    slug: "automotive-repair",
     title: "Automotive Repair",
     description:
       "Dependable maintenance and repairs for brakes, steering, suspension, batteries, filters, leaks, and other common vehicle concerns.",
     icon: Car,
   },
   {
+    slug: "diagnostics",
     title: "Diagnostics",
     description:
       "Honest automotive and electrical diagnostics focused on identifying the actual problem before unnecessary parts are replaced.",
     icon: SearchCheck,
   },
   {
+    slug: "mobile-service",
     title: "Mobile Service",
     description:
       "Mobile diagnostics, scheduled on-site repairs, and emergency roadside assistance throughout LeFlore County and surrounding areas.",
     icon: Truck,
   },
   {
+    slug: "small-engine-repair",
     title: "Small Engine Repair",
     description:
       "Repair and maintenance for lawn mowers, generators, tillers, trimmers, edgers, and other lawn and garden equipment.",
     icon: Tractor,
   },
   {
+    slug: "detailing",
     title: "Detailing",
     description:
       "Basic vehicle cleaning services, including interior vacuuming, body washing, wheel cleaning, and waxing.",
@@ -152,13 +158,13 @@ export default function Home() {
                 Call for an Estimate
               </a>
 
-              <a
-                href="mailto:poteauvalleyrepair@gmail.com?subject=Service%20Request"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-bold transition duration-200 hover:-translate-y-0.5 hover:bg-white/10"
-              >
-                <Mail size={20} aria-hidden="true" />
-                Request Service
-              </a>
+              <Link
+              href="/request-service"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-bold transition duration-200 hover:-translate-y-0.5 hover:bg-white/10"
+            >
+            <Mail size={20} aria-hidden="true" />
+             Request Service
+            </Link>
             </div>
 
             <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-zinc-400">
@@ -219,8 +225,9 @@ export default function Home() {
               const Icon = service.icon;
 
               return (
-                <article
+                <Link
                   key={service.title}
+                  href={`/services/${service.slug}`}
                   className="group rounded-2xl border border-white/10 bg-zinc-950 p-7 transition duration-300 hover:-translate-y-1 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-950/20"
                 >
                   <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-red-600/15 text-red-500 transition duration-300 group-hover:bg-red-600 group-hover:text-white">
@@ -230,7 +237,7 @@ export default function Home() {
                   <p className="mt-3 leading-7 text-zinc-400">
                     {service.description}
                   </p>
-                </article>
+                </Link>
               );
             })}
 
