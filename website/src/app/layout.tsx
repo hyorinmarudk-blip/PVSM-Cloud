@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const siteUrl = "https://poteauvalleyrepair.com";
 
@@ -104,6 +105,7 @@ export default function RootLayout({
         <LocalBusinessJsonLd />
         {children}
         <SiteFooter />
+        <GoogleAnalytics gaId="G-7RZNC8LVDF" />
       </body>
     </html>
   );
