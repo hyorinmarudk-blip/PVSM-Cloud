@@ -1,7 +1,11 @@
+import { sendTemplateEmail } from "./email/sendEmail";
+import { buildTestEmail } from "./email/templates/testEmail";
+import type { EmailBinding } from "./email/types";
+
 interface Env {
   TURNSTILE_SECRET_KEY: string;
   EMAIL_TEST_KEY: string;
-  EMAIL: SendEmail;
+  EMAIL: EmailBinding;
 }
 
 type TurnstileResponse = {
@@ -204,28 +208,10 @@ export default {
   }
 
   try {
-    const result = await env.EMAIL.send({
-      to: "poteauvalleyrepair@gmail.com",
-      from: {
-        email: "service@poteauvalleyrepair.com",
-        name: "Poteau Valley Repair",
-      },
-      subject: "PVSM Cloud Worker Email Test",
-      text: [
-        "The PVSM Cloud Worker email binding is working.",
-        "",
-        `Sent: ${new Date().toISOString()}`,
-        "Worker: services-api",
-      ].join("\n"),
-      html: `
-        <div style="font-family:Arial,sans-serif;max-width:620px;margin:auto">
-          <h1 style="color:#b91c1c">PVSM Cloud Email Test</h1>
-          <p>The Cloudflare Worker email binding is working.</p>
-          <p><strong>Worker:</strong> services-api</p>
-          <p><strong>Sent:</strong> ${new Date().toISOString()}</p>
-        </div>
-      `,
-    });
+    const result = await sendTemplateEmail({
+  			binding: env.EMAIL,
+ 			email: buildTestEmail(),
+		});
 
     return jsonResponse(
       {
