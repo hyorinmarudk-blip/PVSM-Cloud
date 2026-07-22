@@ -13,5 +13,5 @@ export const BUSINESS = {
   phoneLink: "+19189620233",
   email: "poteauvalleyrepair@gmail.com",
   website: "https://poteauvalleyrepair.com",
-  serviceArea: "LeFlore County and surrounding counties",
+  serviceArea: "LeFlore County and surrounding areas",
 } as const;
