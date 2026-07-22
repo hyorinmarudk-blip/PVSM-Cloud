@@ -160,7 +160,7 @@ export default function SiteFooter() {
 
             <Link
             href="/request-service"
-            className="mt-7 inline-flex rounded-xl bg-red-600 px-5 py-3 font-bold transition hover:bg-red-500"
+            className="flex items-center gap-3 text-zinc-400 transition hover:text-red-500"
             >
               <Mail
                 size={19}
@@ -184,13 +184,6 @@ export default function SiteFooter() {
               Google Business Profile
             </a>
           </div>
-
-          <Link
-            href="/request-service"
-            className="mt-7 inline-flex rounded-xl bg-red-600 px-5 py-3 font-bold transition hover:bg-red-500"
-          >
-            Request Service
-          </Link>
         </div>
       </div>
 

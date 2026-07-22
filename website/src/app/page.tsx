@@ -295,7 +295,7 @@ export default function Home() {
               </p>
               <a
             href="tel:+19189620233"
-            className="hidden items-center gap-2 rounded-full bg-red-600 px-5 py-3 text-sm font-bold shadow-lg shadow-red-950/40 transition duration-200 hover:-translate-y-0.5 hover:bg-red-500 sm:flex"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-bold transition duration-200 hover:-translate-y-0.5 hover:bg-white/10"
           >
             <Phone size={17} aria-hidden="true" />
             Call Now
@@ -754,7 +754,7 @@ export default function Home() {
           <div className="flex flex-col gap-3">
             <a
             href="tel:+19189620233"
-            className="hidden items-center gap-2 rounded-full bg-red-600 px-5 py-3 text-sm font-bold shadow-lg shadow-red-950/40 transition duration-200 hover:-translate-y-0.5 hover:bg-red-500 sm:flex"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-bold transition duration-200 hover:-translate-y-0.5 hover:bg-white/10"
           >
             <Phone size={17} aria-hidden="true" />
             Call Now
