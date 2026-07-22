@@ -51,7 +51,7 @@ export default function NotFound() {
             </Link>
 
             <a
-              href="tel:+19184429692"
+              href="tel:+19189620233"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-bold transition hover:bg-white/10"
             >
               <Phone size={20} aria-hidden="true" />

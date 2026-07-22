@@ -155,7 +155,7 @@ export default function SiteFooter() {
                 className="shrink-0 text-red-500"
                 aria-hidden="true"
               />
-              (918) 442-9692
+              (918) 962-0233
             </a>
 
             <a

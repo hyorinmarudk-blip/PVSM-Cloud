@@ -94,7 +94,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>Poteau Valley Repair</span>
-          <span style={{ color: "#ef4444" }}>(918) 442-9692</span>
+          <span style={{ color: "#ef4444" }}>(918) 962-0233</span>
         </div>
       </div>
     ),
