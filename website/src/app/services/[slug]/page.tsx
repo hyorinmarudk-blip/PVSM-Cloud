@@ -162,13 +162,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
               >
                 Request Service
               </Link>
-
-              <Link
-              href="/request-service"
-              className="rounded-xl bg-red-600 px-7 py-4 text-center font-black transition hover:bg-red-500"
-            >
-              Email the Shop
-            </Link>
             </div>
           </section>
         </div>

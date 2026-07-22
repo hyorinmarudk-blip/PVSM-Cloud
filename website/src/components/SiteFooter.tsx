@@ -158,9 +158,9 @@ export default function SiteFooter() {
               (918) 962-0233
             </a>
 
-            <a
-              href="mailto:poteauvalleyrepair@gmail.com"
-              className="flex items-start gap-3 break-all text-zinc-400 transition hover:text-red-500"
+            <Link
+            href="/request-service"
+            className="mt-7 inline-flex rounded-xl bg-red-600 px-5 py-3 font-bold transition hover:bg-red-500"
             >
               <Mail
                 size={19}
@@ -168,7 +168,7 @@ export default function SiteFooter() {
                 aria-hidden="true"
               />
               poteauvalleyrepair@gmail.com
-            </a>
+            </Link>
 
             <a
               href="https://share.google/tT3Z3VIMLM7V576j6"

@@ -98,10 +98,10 @@ export default function ServicesPage() {
 
           <a
             href="tel:+19189620233"
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-4 font-black text-red-700 transition hover:-translate-y-0.5 hover:bg-red-50"
+            className="hidden items-center gap-2 rounded-full bg-red-600 px-5 py-3 text-sm font-bold shadow-lg shadow-red-950/40 transition duration-200 hover:-translate-y-0.5 hover:bg-red-500 sm:flex"
           >
-            <Phone size={20} aria-hidden="true" />
-            Call (918) 962-0233
+            <Phone size={17} aria-hidden="true" />
+            Call Now
           </a>
         </div>
       </section>
