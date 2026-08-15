@@ -52,7 +52,7 @@ export const services: Service[] = [
           "Air-filter and cabin-filter replacement",
           "Oil changes and routine maintenance",
           "General mechanical repairs",
-          "Vehicle inspections",
+          "Vehicle pre purchase inspections",
         ],
       },
       {
