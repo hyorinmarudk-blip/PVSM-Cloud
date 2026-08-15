@@ -40,8 +40,6 @@ export const services: Service[] = [
       "Battery testing and replacement",
       "Air and cabin-filter replacement",
       "Oil changes and maintenance",
-      "Wiper installation",
-      "Water-leak diagnosis and repair",
       "General repairs",
     ],
     sections: [
@@ -53,8 +51,6 @@ export const services: Service[] = [
           "Battery testing and replacement",
           "Air-filter and cabin-filter replacement",
           "Oil changes and routine maintenance",
-          "Wiper-blade installation",
-          "Water-leak inspection and repair",
           "General mechanical repairs",
           "Vehicle inspections",
         ],
