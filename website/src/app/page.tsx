@@ -52,7 +52,7 @@ const services = [
     slug: "mobile-service",
     title: "Mobile Service",
     description:
-      "Mobile diagnostics, scheduled on-site repairs, and emergency roadside assistance throughout LeFlore County and surrounding areas.",
+      "Mobile diagnostics and scheduled on-site repairs throughout LeFlore County and surrounding areas.",
     icon: Truck,
   },
   {
@@ -138,7 +138,7 @@ const repairSteps = [
   },
   {
     number: "02",
-    title: "Inspection & Diagnosis",
+    title: "Diagnosis",
     description:
       "We inspect and test the vehicle or equipment to identify the problem and determine what work may be required.",
     icon: ClipboardList,

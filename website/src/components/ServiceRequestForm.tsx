@@ -560,7 +560,6 @@ export default function ServiceRequestForm() {
                 <option>Repair</option>
                 <option>Maintenance</option>
                 <option>Mobile Service</option>
-                <option>Roadside Assistance</option>
                 <option>Lawn Mower Repair</option>
                 <option>Small Engine Repair</option>
                 <option>Detailing</option>
@@ -665,7 +664,7 @@ export default function ServiceRequestForm() {
                   </p>
 
                   <p className="mt-1 text-sm leading-6 text-red-100/80">
-                    For urgent roadside assistance, call{" "}
+                    {" "}
                     <a
                       href="tel:+19189620233"
                       className="font-black underline"

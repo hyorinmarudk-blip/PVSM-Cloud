@@ -36,7 +36,6 @@ export const services: Service[] = [
     icon: Car,
     highlights: [
       "Brake repair and replacement",
-      "Steering and suspension repair",
       "Battery testing and replacement",
       "Air and cabin-filter replacement",
       "Oil changes and maintenance",
@@ -47,7 +46,6 @@ export const services: Service[] = [
         heading: "Automotive Services Available",
         items: [
           "Brake inspection, repair, and replacement",
-          "Steering and suspension diagnosis and repair",
           "Battery testing and replacement",
           "Air-filter and cabin-filter replacement",
           "Oil changes and routine maintenance",
@@ -59,7 +57,6 @@ export const services: Service[] = [
         heading: "Common Reasons to Request Service",
         items: [
           "Grinding, squealing, or pulling while braking",
-          "Vehicle wandering or uneven tire wear",
           "Hard starting or repeated battery failure",
           "Fluid leaks",
           "Unusual vibration or noise",
