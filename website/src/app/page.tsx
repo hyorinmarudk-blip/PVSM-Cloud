@@ -38,7 +38,7 @@ const services = [
     slug: "automotive-repair",
     title: "Automotive Repair",
     description:
-      "Dependable maintenance and repairs for brakes, steering, suspension, batteries, filters, leaks, and other common vehicle concerns.",
+      "Dependable maintenance and repairs for brakes, batteries, filters, leaks, and other common vehicle concerns.",
     icon: Car,
   },
   {
